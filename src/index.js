@@ -7,7 +7,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const { Todo } = require('./models/todo');
+const db = require('./config/database');
+const sequelize = require('sequelize');
+const Todo = require('./models/todo')(db, sequelize);
 
 //Port from server -------------------
 app.listen(3003);
@@ -37,6 +39,7 @@ app.post('/todo', async (req, res) => {
 
 		return res.status(200).send(todo);
 	} catch (err) {
+		console.log('err ->', err);
 		return res.status(400).send({ error: err });
 	}
 });
@@ -71,5 +74,16 @@ app.get('/todo/:id', (req, res) => {
 		})
 		.catch((err) => {
 			return res.status(400).send({ error: err });
+		});
+});
+
+app.delete('/todo/:id', (req, res) => {
+	const id = req.params.id;
+	Todo.destroy({ where: { id: id } })
+		.then((data) => {
+			return res.sendStatus(200).send(data);
+		})
+		.catch((err) => {
+			return res.sendStatus(400).send({ error: err });
 		});
 });
