@@ -1,7 +1,7 @@
 # Api-node-basic
 Creating the basic API node to remember the importance of some topics
 
-# ROUTE FOR API
+## ROUTE FOR API
 ## ---------------------------------------
 ### GET ALL FROM TABLE TODO -> URL/TODO
 ### GET ID FROM TABLE TODO -> URL/TODO/:ID
@@ -10,13 +10,13 @@ Creating the basic API node to remember the importance of some topics
 ### DELETE FROM TABLE TODO -> URL/TODO/:ID
 ## ---------------------------------------
 
-# STRUCTURE RESPONSE API 
+## STRUCTURE RESPONSE API 
 ### [ 
-###  { 
-###  "id": INT,
-###  "name": STRING,
-###  "amount": INT,
-###  "createdAt": DateTime,
-###  "updatedAt": DateTime,
-###  }
+###   { 
+###    "id": INT,
+###    "name": STRING,
+###    "amount": INT,
+###    "createdAt": DateTime,
+###    "updatedAt": DateTime,
+###   }
 ### ]
