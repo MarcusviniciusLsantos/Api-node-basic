@@ -11,12 +11,12 @@ Creating the basic API node to remember the importance of some topics
 ## ---------------------------------------
 
 ## STRUCTURE RESPONSE API 
-### [ 
-###   { 
-###    "id": INT,
-###    "name": STRING,
-###    "amount": INT,
-###    "createdAt": DateTime,
-###    "updatedAt": DateTime,
-###   }
-### ]
+### `[` 
+###   `{` 
+###    `"id": INT,`
+###    `"name": STRING,`
+###    `"amount": INT,`
+###    `"createdAt": DateTime,`
+###    `"updatedAt": DateTime,`
+###   `}`
+### `]`
