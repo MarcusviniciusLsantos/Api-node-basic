@@ -12,7 +12,7 @@ Creating the basic API node to remember the importance of some topics
 
 ## STRUCTURE RESPONSE API 
 ### `[` 
-###   `{` 
+###   &nbsp;`{` 
 ###    `"id": INT,`
 ###    `"name": STRING,`
 ###    `"amount": INT,`
